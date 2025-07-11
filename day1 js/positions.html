@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Position Examples</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .section {
+      padding: 20px;
+      border-bottom: 2px dashed #ccc;
+      height: 200px;
+      position: relative;
+    }
+
+    .static-box {
+      background: #f9c2c2;
+      padding: 10px;
+      position: static;
+    }
+
+    .relative-box {
+      background: #c2e1f9;
+      padding: 10px;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .absolute-box {
+      background: #d1f9c2;
+      padding: 10px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .fixed-box {
+      background: #f7d9c2;
+      padding: 10px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+      border: 2px solid #000;
+    }
+
+    .sticky-box {
+      background: #e2c2f9;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .spacer {
+      height: 1000px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-box">Sticky Box (sticks on scroll)</div>
+
+  <div class="section">
+    <div class="static-box">Static Box (default)</div>
+  </div>
+
+  <div class="section">
+    <div class="relative-box">Relative Box (moved 20px)</div>
+  </div>
+
+  <div class="section">
+    <div class="absolute-box">Absolute Box (positioned to top-right)</div>
+    <p>This section has <strong>position: relative</strong> so the absolute box is placed relative to it.</p>
+  </div>
+
+  <div class="spacer">
+    <p>Scroll down to see the <strong>sticky</strong> and <strong>fixed</strong> boxes stay in place.</p>
+  </div>
+
+  <div class="fixed-box">Fixed Box (always top-right)</div>
+
+</body>
+</html>

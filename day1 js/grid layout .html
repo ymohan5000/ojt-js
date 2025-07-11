@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Layout Example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background: #4a148c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background: #e1bee7;
+      padding: 20px;
+    }
+
+    main {
+      grid-area: main;
+      background: #f3e5f5;
+      padding: 20px;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #4a148c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #ce93d8;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <header>
+      <h1>CSS Grid Layout</h1>
+    </header>
+
+    <aside>
+      <h2>Sidebar</h2>
+      <p>Some sidebar content here.</p>
+    </aside>
+
+    <main>
+      <h2>Main Content</h2>
+      <p>This layout is made with CSS Grid.</p>
+
+      <div class="card-grid">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Footer Section</p>
+    </footer>
+  </div>
+
+</body>
+</html>

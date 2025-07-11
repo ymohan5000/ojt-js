@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Display</title>
+</head>
+<body>
+
+    <h1>विद्यार्थीको जानकारी</h1>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="course"></p>
+
+    <script>
+        // Object बनाउने
+        let student = {
+            name: "राम",
+            age: 20,
+            course: "BSc CSIT"
+        };
+
+        // HTML मा data देखाउने
+        document.getElementById("name").innerText = "Name: " + student.name;
+        document.getElementById("age").innerText = "Age: " + student.age;
+        document.getElementById("course").innerText = "कोर्स: " + student.course;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- //create an object and write the object data into html. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>student details</h1>
+    <p id="name"></p>
+ <p id="age"></p>
+  <p id="course"></p>
+  <script>
+let student={
+    name:"mohan yadav",
+    age:18,
+    course:"computer sciecnce"
+}
+document.getElementById("name").innerHTML="name:"+student.name;
+document.getElementById("age").innerHTML="age:"+student.age;
+document.getElementById("course").innerHTML="course:"+student.course;
+  </script>
+</body>
+</html>
